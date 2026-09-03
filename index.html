@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CEE Digital Infra</title>
+    <meta
+      name="description"
+      content="CEE Digital Infra — digitális infrastruktúra Közép- és Kelet-Európában."
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1220'/%3E%3Cpath d='M14 40V24l18-10 18 10v16l-18 10z' fill='none' stroke='%2338bdf8' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%2338bdf8'/%3E%3C/svg%3E" />
+    <style>
+      :root {
+        --bg: #070b14;
+        --fg: #e8eef7;
+        --muted: #93a4bb;
+        --line: rgba(148, 163, 184, 0.18);
+        --accent: #38bdf8;
+        --accent-2: #22d3ee;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--fg);
+        background:
+          radial-gradient(1200px 600px at 12% -10%, rgba(56, 189, 248, 0.16), transparent 55%),
+          radial-gradient(900px 500px at 90% 10%, rgba(34, 211, 238, 0.08), transparent 50%),
+          var(--bg);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: radial-gradient(ellipse at center, black 30%, transparent 78%);
+        pointer-events: none;
+      }
+
+      .wrap {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 48px 24px;
+      }
+
+      main {
+        width: min(760px, 100%);
+        border: 1px solid var(--line);
+        background: rgba(7, 11, 20, 0.72);
+        backdrop-filter: blur(10px);
+        border-radius: 28px;
+        padding: 48px 40px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--accent);
+        margin-bottom: 18px;
+      }
+
+      .kicker::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.16);
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(36px, 6vw, 56px);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 46ch;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 32px 0 0;
+      }
+
+      li {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        color: #d6e4f5;
+      }
+
+      footer {
+        margin-top: 36px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: #6f829a;
+        font-size: 13px;
+      }
+
+      a {
+        color: var(--accent-2);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <main>
+        <div class="kicker">CEE Digital Infra</div>
+        <h1>Digitális infrastruktúra Közép- és Kelet-Európában.</h1>
+        <p>
+          Megbízható, skálázható alapok felhőhöz, hálózathoz, adatközpontokhoz
+          és kiberbiztonsághoz.
+        </p>
+        <ul>
+          <li>Cloud</li>
+          <li>Hálózat</li>
+          <li>Adatközpont</li>
+          <li>Biztonság</li>
+        </ul>
+        <footer>
+          © <span id="year"></span> CEE Digital Infra
+        </footer>
+      </main>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
