@@ -50,7 +50,7 @@
           <a href="#partner">Partner</a>
         </nav>
         <div class="header-actions">
-          <a class="btn btn-primary" href="#newsletter">Subscribe Free</a>
+          <a class="btn btn-primary" href="#newsletter">Subscribe</a>
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
             <span></span>
           </button>
@@ -63,64 +63,30 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="kicker">Data centers · Power · Connectivity · Compute</p>
-            <h1>The intelligence layer for CEE digital infrastructure.</h1>
+            <h1>The intelligence layer for CEE digital infrastructure</h1>
             <p class="lede">
-              Track the projects, investment, power, connectivity and compute
-              infrastructure shaping Central and Eastern Europe.
+              Earlier visibility on the project pipeline, for faster and
+              better-informed decisions across Central and Eastern Europe.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#newsletter">Subscribe Free</a>
+              <a class="btn btn-primary" href="#newsletter">Subscribe</a>
               <a class="btn btn-ghost" href="#coverage">What We Cover</a>
             </div>
           </div>
 
-          <aside class="panel hero-panel" aria-label="Central and Eastern Europe coverage map">
+          <aside class="panel hero-panel">
             <div class="panel-label">
               <span>Primary markets</span>
-              <span>Central &amp; Eastern Europe</span>
+              <span>The region</span>
             </div>
             <div class="map-frame">
-              <svg class="map" viewBox="0 0 420 430" role="img" aria-labelledby="mapTitle mapDesc">
-                <title id="mapTitle">Map of primary CEE markets</title>
-                <desc id="mapDesc">
-                  Poland, Czechia, Slovakia, Hungary and Romania, with schematic
-                  power, fiber and compute connections. No capacity or project
-                  figures.
-                </desc>
-                <path class="strand" d="M210 70 L168 168 L205 214 L248 248 L305 268" />
-                <path class="strand" d="M210 70 L248 248" />
-                <path class="strand" d="M168 168 L248 248" />
-                <path
-                  class="map-country is-focus"
-                  d="M118 28 L268 38 L292 88 L278 158 L228 188 L168 182 L122 148 L98 92 Z"
-                />
-                <path
-                  class="map-country is-focus"
-                  d="M108 168 L198 178 L192 228 L118 224 L96 196 Z"
-                />
-                <path
-                  class="map-country is-focus"
-                  d="M198 178 L268 188 L262 232 L192 228 Z"
-                />
-                <path
-                  class="map-country is-focus"
-                  d="M168 228 L262 232 L254 292 L178 298 L148 262 Z"
-                />
-                <path
-                  class="map-country is-focus"
-                  d="M262 232 L352 242 L372 312 L322 378 L238 362 L254 292 Z"
-                />
-                <text class="map-label" x="168" y="108">Poland</text>
-                <text class="map-label" x="118" y="206">Czechia</text>
-                <text class="map-label" x="208" y="212">Slovakia</text>
-                <text class="map-label" x="178" y="268">Hungary</text>
-                <text class="map-label" x="286" y="308">Romania</text>
-                <circle class="node" cx="210" cy="70" r="3.5" />
-                <circle class="node" cx="168" cy="168" r="3.5" />
-                <circle class="node" cx="205" cy="214" r="3.5" />
-                <circle class="node" cx="248" cy="248" r="3.5" />
-                <circle class="node" cx="305" cy="268" r="3.5" />
-              </svg>
+              <img
+                class="map"
+                src="assets/cee-markets.jpg"
+                width="1024"
+                height="576"
+                alt=""
+              />
             </div>
             <div class="legend">
               <span><i></i> Data centers</span>
@@ -138,20 +104,21 @@
             <p class="kicker">Newsletter</p>
             <h2>CEE Digital Infra Weekly</h2>
             <p>
-              A concise weekly briefing on the data center projects,
-              infrastructure investment and market signals shaping Central and
+              A weekly briefing on data center projects, infrastructure
+              investment, energy and network developments across Central and
               Eastern Europe.
             </p>
-            <p class="audience-line">Built for operators, developers, investors, suppliers and advisors.</p>
+            <p class="audience-line">For investors, developers, operators, suppliers and advisors.</p>
           </div>
-          <form class="signup" id="weekly-form">
-            <label for="email">Work email</label>
+          <form class="signup" id="weekly-form" action="https://formsubmit.co/ajax/editor@ceedigitalinfra.com" method="POST">
+            <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="CEE Digital Infra Weekly — new subscriber" />
+            <input type="hidden" name="_captcha" value="false" />
             <div class="signup-row">
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" disabled />
-              <button class="btn btn-primary" type="button" disabled>Get the Weekly Briefing</button>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="name@company.com" aria-label="Work email" />
+              <button class="btn btn-primary" type="submit">Get the Weekly Briefing</button>
             </div>
-            <p class="form-note">Free. One email per week. No noise.</p>
-            <p class="form-status">Sign-up will open with the first briefing.</p>
+            <p class="form-status" role="status"></p>
           </form>
         </div>
       </section>
@@ -159,29 +126,25 @@
       <section class="section" id="coverage">
         <div class="container">
           <div class="section-head">
-            <p class="kicker">Coverage · 01</p>
+            <p class="kicker">Coverage</p>
             <h2>What We Track</h2>
           </div>
           <div class="card-grid">
             <article class="card">
-              <div class="index">01</div>
               <h3>Data Centers</h3>
-              <p>Projects, capacity, operators, campuses, site development and expansion.</p>
+              <p>Data center projects, capacity, operators and campus development across the region.</p>
             </article>
             <article class="card">
-              <div class="index">02</div>
               <h3>Power</h3>
-              <p>Grid availability, substations, transformers, BESS, PPAs and energy infrastructure.</p>
+              <p>Grid capacity, substations, transformers, battery storage (BESS), PPAs and power infrastructure.</p>
             </article>
             <article class="card">
-              <div class="index">03</div>
               <h3>Connectivity</h3>
-              <p>Fiber networks, IXPs, telecom infrastructure and cross-border connectivity.</p>
+              <p>Fiber networks, internet exchanges (IXPs), telecom infrastructure and cross-border links.</p>
             </article>
             <article class="card">
-              <div class="index">04</div>
               <h3>Compute</h3>
-              <p>AI infrastructure, HPC, GPU capacity, rack density and cooling.</p>
+              <p>AI and HPC infrastructure, GPU capacity, rack density and cooling systems.</p>
             </article>
           </div>
         </div>
@@ -191,115 +154,125 @@
         <div class="container markets-layout">
           <div>
             <div class="section-head">
-              <p class="kicker">Markets · 02</p>
-              <h2>Markets We Cover</h2>
+              <p class="kicker">Markets</p>
+              <h2>Primary Markets</h2>
             </div>
-            <p class="expanding">Expanding coverage across Central and Eastern Europe.</p>
+            <p class="expanding">Our focus across the region.</p>
           </div>
-          <div class="market-list">
-            <span>Poland <small>PL</small></span>
-            <span>Czechia <small>CZ</small></span>
-            <span>Hungary <small>HU</small></span>
-            <span>Romania <small>RO</small></span>
-            <span>Slovakia <small>SK</small></span>
-          </div>
+          <ul class="market-list">
+            <li>Poland</li>
+            <li>Czechia</li>
+            <li>Hungary</li>
+            <li>Romania</li>
+            <li>Slovakia</li>
+          </ul>
         </div>
       </section>
 
       <section class="section" id="audience">
         <div class="container">
           <div class="section-head">
-            <p class="kicker">Audience · 03</p>
-            <h2>Built for the people building the region’s infrastructure</h2>
+            <p class="kicker">Audience</p>
+            <h2>For those building the region’s infrastructure</h2>
           </div>
-          <div class="audience-grid">
-            <div class="person">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="12"/><path d="M8 8V6h8v2"/></svg>
-              <strong>Operators</strong>
-            </div>
-            <div class="person">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg>
-              <strong>Developers</strong>
-            </div>
-            <div class="person">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9.5 10.5h3.2a1.8 1.8 0 0 1 0 3.6H9.5"/></svg>
-              <strong>Investors</strong>
-            </div>
-            <div class="person">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14v10H5z"/><path d="M5 11h14"/></svg>
-              <strong>Suppliers</strong>
-            </div>
-            <div class="person">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V9l7-5 7 5v11"/><path d="M9 13h6"/></svg>
-              <strong>Energy companies</strong>
-            </div>
-            <div class="person">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.4-3 4-4.5 7-4.5S17.6 16 19 19"/></svg>
-              <strong>Engineers</strong>
-            </div>
-            <div class="person">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h10v14H7z"/><path d="M10 9h4M10 13h4"/></svg>
-              <strong>Advisors</strong>
-            </div>
-          </div>
+          <ul class="audience-grid">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="8" />
+                <path d="M12 8v8M9.6 10.2h3.1a1.7 1.7 0 1 1 0 3.4H9.6" />
+              </svg>
+              Investors
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 20V9.5L12 4l8 5.5V20" />
+                <path d="M9 20v-6h6v6" />
+                <path d="M9 11h.01M15 11h.01" />
+              </svg>
+              Developers
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="3.5" width="16" height="5" rx="1" />
+                <rect x="4" y="9.5" width="16" height="5" rx="1" />
+                <rect x="4" y="15.5" width="16" height="5" rx="1" />
+                <path d="M7 6h.01M7 12h.01M7 18h.01" />
+              </svg>
+              Operators
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 6.5 13h4.2L9.2 21 17.5 11h-4.2L12 3z" />
+              </svg>
+              Energy companies
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h8l4 4v12H7z" />
+                <path d="M15 4v4h4M10 12h6M10 16h4" />
+              </svg>
+              Advisors
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3.5 20 8v8l-8 4.5L4 16V8l8-4.5z" />
+                <path d="M12 12 20 8M12 12v8.5M12 12 4 8" />
+              </svg>
+              Suppliers
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="5.5" r="2.2" />
+                <path d="M12 7.8 7.2 20M12 7.8 16.8 20M8.4 15.5h7.2" />
+              </svg>
+              Engineers
+            </li>
+          </ul>
         </div>
       </section>
 
       <section class="section alt" id="about">
-        <div class="container about-grid">
+        <div class="container">
           <div class="section-head">
-            <p class="kicker">About · 04</p>
+            <p class="kicker">About</p>
             <h2>About CEE Digital Infra</h2>
           </div>
-          <div>
+          <div class="about-copy">
             <p>
               CEE Digital Infra is an independent business intelligence publication
-              focused on the infrastructure behind Central and Eastern Europe’s
-              digital economy.
+              focused on the infrastructure behind the region’s digital economy.
             </p>
             <p>
-              We cover data centers, power, connectivity and compute infrastructure
-              across the region.
+              Our analysis is based on project-level tracking, operator interviews
+              and public filings across the region.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="partner">
-        <div class="container partner-grid">
+      <section class="section partner" id="partner">
+        <div class="container">
           <div class="section-head">
-            <p class="kicker">Partner · 05</p>
-            <h2>Reach CEE digital infrastructure decision-makers.</h2>
+            <p class="kicker">Partner</p>
+            <h2>Connect with investors, developers and operators across CEE</h2>
           </div>
           <div class="partner-copy">
             <p>
-              CEE Digital Infra is building a focused professional audience across
-              data centers, power, connectivity and compute infrastructure in
-              Central and Eastern Europe.
+              CEE Digital Infra connects sponsors and partners with a focused
+              professional audience across the region’s digital infrastructure.
             </p>
-            <span class="btn btn-navy" aria-disabled="true">Partner With Us</span>
+            <p class="partner-opps-label">Partnership opportunities</p>
+            <ul class="partner-opps">
+              <li>Sponsored newsletter</li>
+              <li>White-label research</li>
+              <li>Map sponsorship</li>
+            </ul>
+            <a class="btn btn-navy" href="mailto:editor@ceedigitalinfra.com">Partner With Us</a>
             <p class="muted">
               For sponsorships, research partnerships and selected commercial
               collaborations.
             </p>
-            <p class="muted">A contact address will be published here.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="coming-soon">
-        <div class="container">
-          <div class="section-head">
-            <p class="kicker">Next · 06</p>
-            <h2>Coming Soon</h2>
-          </div>
-          <ul class="coming-list">
-            <li><b>Weekly industry briefing</b><span class="tag">Planned</span></li>
-            <li><b>CEE infrastructure project tracking</b><span class="tag">Planned</span></li>
-            <li><b>Market maps</b><span class="tag">Planned</span></li>
-            <li><b>Regional research</b><span class="tag">Planned</span></li>
-            <li><b>Industry reports</b><span class="tag">Planned</span></li>
-          </ul>
         </div>
       </section>
     </main>
@@ -308,31 +281,24 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <div class="brand">
-              <span class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            <a class="brand" href="#top">
+              <img src="assets/logo.png" alt="" />
               <span class="brand-name">CEE Digital Infra</span>
-            </div>
-            <p>Data centers, power, connectivity &amp; compute across Central and Eastern Europe.</p>
-          </div>
-          <nav class="footer-links" aria-label="Footer">
-            <a href="#coverage">Coverage</a>
-            <a href="#markets">Markets</a>
-            <a href="#newsletter">Newsletter</a>
-            <a href="#partner">Partner</a>
-            <a href="#contact">Contact</a>
-            <a href="privacy.html">Privacy</a>
-          </nav>
-          <div class="footer-contact">
-            <span>Contact details coming soon</span>
-            <a class="linkedin" href="https://www.linkedin.com/" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9H4V20h2.5V9zM5.25 4A1.75 1.75 0 1 0 5.26 7.5 1.75 1.75 0 0 0 5.25 4zM20 20h-2.5v-5.6c0-1.8-.64-2.7-1.86-2.7-1.36 0-2.14.92-2.14 2.7V20H11V9h2.4v1.5c.5-.9 1.6-1.8 3.3-1.8 2.2 0 3.3 1.4 3.3 4.3V20z"/></svg>
-              LinkedIn
             </a>
+            <p class="footer-tagline">Independent business intelligence on digital infrastructure in Central and Eastern Europe.</p>
           </div>
         </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#coverage">Coverage</a>
+          <a href="#markets">Markets</a>
+          <a href="#newsletter">Newsletter</a>
+          <a href="#partner">Partner</a>
+          <a href="mailto:editor@ceedigitalinfra.com">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+        </nav>
         <div class="copyright">
           <span>© <span id="year"></span> CEE Digital Infra</span>
-          <span>Independent · Pre-publication</span>
         </div>
       </div>
     </footer>
