@@ -498,6 +498,14 @@ input {
   outline-offset: 1px;
 }
 
+.signup input:disabled,
+.signup .btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .form-note,
 .form-status {
   margin: 12px 0 0;
